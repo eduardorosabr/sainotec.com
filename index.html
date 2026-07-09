@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saino Tec em Rio do Sul: assistencia tecnica e acessorios para celulares, com atendimento rapido pelo WhatsApp.">
+  <title>Saino Tec | Assistencia Tecnica em Rio do Sul</title>
+  <style>
+    :root {
+      --blue-950: #111936;
+      --blue-900: #17265b;
+      --blue-700: #294fc5;
+      --blue-500: #507bf1;
+      --red-500: #d9464f;
+      --gold-400: #d8b15f;
+      --ink: #151722;
+      --muted: #60677d;
+      --surface: #f6f8ff;
+      --white: #ffffff;
+      --line: rgba(23, 38, 91, 0.13);
+      --shadow: 0 24px 70px rgba(17, 25, 54, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+      background: var(--surface);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 6% 12%, rgba(80, 123, 241, 0.18), transparent 28rem),
+        radial-gradient(circle at 92% 8%, rgba(216, 177, 95, 0.18), transparent 22rem),
+        linear-gradient(180deg, #f9fbff 0%, #eef3ff 45%, #ffffff 100%);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(17, 25, 54, 0.9);
+      color: var(--white);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      border: 1px solid rgba(216, 177, 95, 0.55);
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--blue-700), var(--blue-950));
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      font-style: italic;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .brand-name {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.2rem, 3.4vw, 1.65rem);
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .brand-subtitle {
+      margin: -4px 0 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.78rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.93rem;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 8px;
+      font-weight: 800;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, #1db954, #128c7e);
+      color: var(--white);
+      box-shadow: 0 16px 28px rgba(18, 140, 126, 0.22);
+    }
+
+    .button-dark {
+      background: var(--blue-950);
+      color: var(--white);
+      box-shadow: 0 16px 28px rgba(17, 25, 54, 0.22);
+    }
+
+    .button-light {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.14);
+      color: var(--white);
+    }
+
+    .promo-strip {
+      background: var(--gold-400);
+      color: var(--blue-950);
+      font-size: 0.92rem;
+      font-weight: 900;
+    }
+
+    .promo-strip .container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .hero {
+      position: relative;
+      padding: 66px 0 34px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 78% 18%, rgba(216, 177, 95, 0.25), transparent 19rem),
+        radial-gradient(circle at 12% 88%, rgba(217, 70, 79, 0.18), transparent 18rem),
+        linear-gradient(135deg, var(--blue-950), var(--blue-700));
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "\9F8D";
+      position: absolute;
+      right: clamp(14px, 6vw, 82px);
+      top: 92px;
+      z-index: -1;
+      color: rgba(216, 177, 95, 0.11);
+      font-family: "Noto Serif SC", "Songti SC", SimSun, Georgia, serif;
+      font-size: clamp(7rem, 20vw, 17rem);
+      line-height: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.75fr);
+      align-items: center;
+      gap: clamp(30px, 6vw, 72px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      color: #ffe7ae;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: var(--gold-400);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.35rem, 6.4vw, 5.2rem);
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 22px 0 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: clamp(1.02rem, 2.1vw, 1.24rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .badge {
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      padding: 8px 13px;
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.9rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 34px;
+      max-width: 650px;
+    }
+
+    .proof-item {
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .proof-item strong {
+      display: block;
+      color: #ffe7ae;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .proof-item span {
+      display: block;
+      margin-top: 6px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.84rem;
+    }
+
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+      min-height: 470px;
+      padding: 28px;
+      border: 1px solid rgba(216, 177, 95, 0.34);
+      border-radius: 8px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 18px);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(216, 177, 95, 0.34);
+      border-radius: 8px;
+      pointer-events: none;
+    }
+
+    .hero-panel::after {
+      content: "\9F8D";
+      position: absolute;
+      right: -22px;
+      bottom: -34px;
+      color: rgba(216, 177, 95, 0.14);
+      font-family: "Noto Serif SC", "Songti SC", SimSun, Georgia, serif;
+      font-size: 12rem;
+      line-height: 1;
+    }
+
+    .panel-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 414px;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .panel-logo {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.2rem, 9vw, 5.8rem);
+      font-style: italic;
+      line-height: 0.95;
+    }
+
+    .panel-logo span {
+      display: block;
+      color: #ffe7ae;
+      font-size: 0.24em;
+      font-style: normal;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .panel-services {
+      display: grid;
+      gap: 10px;
+      margin: 28px 0;
+    }
+
+    .panel-services span {
+      display: inline-flex;
+      width: fit-content;
+      border-left: 3px solid var(--gold-400);
+      padding-left: 12px;
+      color: rgba(255, 255, 255, 0.84);
+      font-weight: 800;
+    }
+
+    .panel-contact {
+      display: grid;
+      gap: 8px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.98rem;
+    }
+
+    .panel-contact strong {
+      color: var(--white);
+      font-size: 1.08rem;
+    }
+
+    .quote-card {
+      position: relative;
+      z-index: 1;
+      margin: 22px 0;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .quote-card small {
+      display: block;
+      color: #ffe7ae;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .quote-card strong {
+      display: block;
+      margin-top: 6px;
+      color: var(--white);
+      font-size: 1.55rem;
+      line-height: 1.12;
+    }
+
+    section {
+      padding: clamp(56px, 8vw, 92px) 0;
+    }
+
+    .quick-offers {
+      padding: 0;
+      background: var(--white);
+    }
+
+    .quick-offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      transform: translateY(-28px);
+    }
+
+    .offer-card {
+      padding: 20px;
+      border: 1px solid rgba(17, 25, 54, 0.12);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 18px 42px rgba(17, 25, 54, 0.13);
+    }
+
+    .offer-card b {
+      display: block;
+      color: var(--blue-950);
+      font-size: 1.06rem;
+    }
+
+    .offer-card span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .problems {
+      background: var(--white);
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .problem-card {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+      min-height: 150px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f9fbff;
+      box-shadow: 0 14px 36px rgba(41, 79, 197, 0.07);
+    }
+
+    .problem-icon {
+      display: grid;
+      width: 52px;
+      height: 52px;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--blue-950);
+      color: var(--gold-400);
+      font-weight: 900;
+    }
+
+    .problem-card h3 {
+      color: var(--blue-950);
+      font-size: 1.18rem;
+    }
+
+    .problem-card p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .solution-strip {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      margin-top: 26px;
+      padding: 24px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--blue-950), var(--blue-700));
+      color: var(--white);
+    }
+
+    .solution-strip h3 {
+      font-size: clamp(1.45rem, 2.6vw, 2rem);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .solution-strip p {
+      margin: 8px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(260px, 0.55fr);
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--blue-700);
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    h2 {
+      color: var(--blue-950);
+      font-size: clamp(2rem, 4.4vw, 3.4rem);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      position: relative;
+      min-height: 235px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 14px 40px rgba(41, 79, 197, 0.08);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(41, 79, 197, 0.3);
+      box-shadow: 0 20px 50px rgba(41, 79, 197, 0.15);
+    }
+
+    .service-icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 8px;
+      background: #eef3ff;
+      color: var(--blue-700);
+      font-size: 1.55rem;
+      font-weight: 900;
+    }
+
+    .service-card h3 {
+      color: var(--blue-950);
+      font-size: 1.2rem;
+    }
+
+    .service-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .service-link {
+      display: inline-flex;
+      margin-top: 18px;
+      color: var(--blue-700);
+      font-weight: 900;
+    }
+
+    .highlight {
+      background: var(--blue-950);
+      color: var(--white);
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.7fr);
+      gap: clamp(28px, 6vw, 70px);
+      align-items: center;
+    }
+
+    .highlight h2 {
+      color: var(--white);
+    }
+
+    .highlight p {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .step-number {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--gold-400);
+      color: var(--blue-950);
+      font-weight: 900;
+    }
+
+    .step h3 {
+      font-size: 1.08rem;
+    }
+
+    .step p {
+      margin: 6px 0 0;
+      font-size: 0.96rem;
+    }
+
+    .owner-note {
+      position: relative;
+      padding: 30px;
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(216, 177, 95, 0.16), rgba(217, 70, 79, 0.11)),
+        rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(216, 177, 95, 0.3);
+    }
+
+    .owner-note::after {
+      content: "\4E2D";
+      position: absolute;
+      right: 22px;
+      bottom: 0;
+      color: rgba(216, 177, 95, 0.16);
+      font-family: "Noto Serif SC", SimSun, Georgia, serif;
+      font-size: 6rem;
+      line-height: 1;
+    }
+
+    .owner-note p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+      color: var(--white);
+    }
+
+    .commercial-banner {
+      padding: 28px;
+      border-radius: 8px;
+      background: var(--white);
+      color: var(--ink);
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18);
+    }
+
+    .commercial-banner h3 {
+      color: var(--blue-950);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .commercial-banner p {
+      margin: 12px 0 18px;
+      color: var(--muted);
+    }
+
+    .commercial-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .commercial-list li {
+      display: flex;
+      gap: 10px;
+      color: var(--ink);
+      font-weight: 750;
+    }
+
+    .commercial-list li::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      flex: 0 0 auto;
+      margin-top: 8px;
+      border-radius: 999px;
+      background: var(--gold-400);
+    }
+
+    .info {
+      background: var(--white);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(320px, 0.78fr);
+      gap: 22px;
+    }
+
+    .info-panel {
+      padding: clamp(24px, 4vw, 34px);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f9fbff;
+    }
+
+    .info-panel h2 {
+      margin-bottom: 18px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-list li {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 13px;
+      align-items: start;
+      color: var(--muted);
+    }
+
+    .contact-list b {
+      display: block;
+      color: var(--ink);
+    }
+
+    .contact-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 8px;
+      background: #eef3ff;
+      color: var(--blue-700);
+      font-weight: 900;
+    }
+
+    .cta {
+      color: var(--white);
+      background:
+        radial-gradient(circle at 82% 40%, rgba(216, 177, 95, 0.2), transparent 18rem),
+        linear-gradient(135deg, var(--blue-950), var(--blue-700));
+    }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta h2 {
+      color: var(--white);
+    }
+
+    .cta p {
+      max-width: 620px;
+      margin: 14px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    footer {
+      padding: 26px 0;
+      color: rgba(255, 255, 255, 0.7);
+      background: #0c1229;
+      font-size: 0.93rem;
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .hero-grid,
+      .section-heading,
+      .highlight-grid,
+      .info-grid,
+      .solution-strip,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        max-width: 420px;
+      }
+
+      .panel-content {
+        min-height: 390px;
+      }
+
+      .hero-proof,
+      .quick-offers-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-offers-grid {
+        transform: none;
+        padding: 18px 0 0;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .problem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .topbar {
+        position: static;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-actions,
+      .button {
+        width: 100%;
+      }
+
+      .promo-strip .container {
+        align-items: center;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .problem-card {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: auto;
+      }
+
+      .footer-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="promo-strip">
+      <div class="container">
+        <span>Orcamento pelo WhatsApp</span>
+        <span>Loja no Centro de Rio do Sul</span>
+      </div>
+    </div>
+
+    <header class="topbar">
+      <nav class="container nav" aria-label="Navegacao principal">
+        <a class="brand" href="#inicio" aria-label="Saino Tec inicio">
+          <span class="brand-mark">S</span>
+          <span>
+            <span class="brand-name">Saino Tec</span>
+            <span class="brand-subtitle">Acessorios e Assistencia Tecnica</span>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#problemas">Problemas</a>
+          <a href="#servicos">Servicos</a>
+          <a href="#atendimento">Atendimento</a>
+          <a href="#contato">Contato</a>
+          <a class="button button-primary" href="https://wa.me/5547992608010" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Assistencia tecnica em Rio do Sul</p>
+            <h1 id="hero-title">Seu celular consertado com agilidade, peca certa e atendimento direto.</h1>
+            <p class="hero-copy">Tela quebrou, bateria nao segura carga ou o aparelho parou de funcionar? Chame a Saino Tec no WhatsApp e receba uma orientacao rapida antes de ir ate a loja.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://wa.me/5547992608010?text=Ola%2C%20vim%20pelo%20site%20da%20Saino%20Tec%20e%20quero%20um%20orcamento." target="_blank" rel="noopener">Pedir orcamento agora</a>
+              <a class="button button-light" href="#contato">Como chegar</a>
+            </div>
+            <div class="hero-badges" aria-label="Destaques">
+              <span class="badge">Troca de tela</span>
+              <span class="badge">Bateria e conectores</span>
+              <span class="badge">Peliculas e carregadores</span>
+              <span class="badge">Diagnostico rapido</span>
+            </div>
+            <div class="hero-proof" aria-label="Beneficios comerciais">
+              <div class="proof-item">
+                <strong>Centro</strong>
+                <span>Facil de chegar em Rio do Sul</span>
+              </div>
+              <div class="proof-item">
+                <strong>WhatsApp</strong>
+                <span>Atendimento antes da visita</span>
+              </div>
+              <div class="proof-item">
+                <strong>Pratico</strong>
+                <span>Conserto e acessorios no mesmo lugar</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-label="Informacoes principais da Saino Tec">
+            <div class="panel-content">
+              <div>
+                <div class="panel-logo">Saino Tec <span>Assistencia tecnica</span></div>
+                <div class="quote-card">
+                  <small>Atendimento comercial</small>
+                  <strong>Envie uma foto do problema e peca uma avaliacao.</strong>
+                </div>
+                <div class="panel-services" aria-label="Resumo de servicos">
+                  <span>Telas, baterias e conectores</span>
+                  <span>Peliculas, carregadores e cabos</span>
+                  <span>Diagnostico para varios defeitos</span>
+                </div>
+              </div>
+              <div class="panel-contact">
+                <strong>Atendimento no Centro</strong>
+                <span>Rua Aristiliano Ramos, 42 - Sala 04</span>
+                <span>WhatsApp: 47 9 9260-8010</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="quick-offers" aria-label="Facilidades">
+        <div class="container quick-offers-grid">
+          <div class="offer-card">
+            <b>Problema no celular?</b>
+            <span>Fale o modelo e o defeito pelo WhatsApp para agilizar o atendimento.</span>
+          </div>
+          <div class="offer-card">
+            <b>Peliculas e carregadores</b>
+            <span>Venda de peliculas, carregadores, cabos e capas para proteger e usar melhor seu aparelho.</span>
+          </div>
+          <div class="offer-card">
+            <b>Atendimento local</b>
+            <span>Loja no Centro, ideal para resolver sem perder tempo.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="problemas" class="problems">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="kicker">Problemas comuns</p>
+              <h2>Identifique o defeito e veja a solucao indicada.</h2>
+            </div>
+            <p>Se algum desses sintomas aparece no seu celular, envie uma mensagem para receber orientacao antes de ir ate a loja.</p>
+          </div>
+
+          <div class="problem-grid">
+            <article class="problem-card">
+              <span class="problem-icon">01</span>
+              <div>
+                <h3>Ghost click ou toque fantasma</h3>
+                <p>A tela mexe sozinha, abre apps sem tocar ou digita letras aleatorias. A solucao pode envolver diagnostico do touch, troca de tela ou limpeza tecnica.</p>
+              </div>
+            </article>
+            <article class="problem-card">
+              <span class="problem-icon">02</span>
+              <div>
+                <h3>Tela quebrada, manchada ou sem imagem</h3>
+                <p>Quedas podem afetar vidro, display e sensibilidade ao toque. A loja avalia o modelo e indica a substituicao correta.</p>
+              </div>
+            </article>
+            <article class="problem-card">
+              <span class="problem-icon">03</span>
+              <div>
+                <h3>Celular nao carrega</h3>
+                <p>O problema pode estar no cabo, carregador, conector ou bateria. Tambem vendemos carregadores e cabos para teste e reposicao.</p>
+              </div>
+            </article>
+            <article class="problem-card">
+              <span class="problem-icon">04</span>
+              <div>
+                <h3>Bateria descarregando rapido</h3>
+                <p>Quando o aparelho desliga sozinho, esquenta ou nao segura carga, a bateria pode precisar de avaliacao ou troca.</p>
+              </div>
+            </article>
+            <article class="problem-card">
+              <span class="problem-icon">05</span>
+              <div>
+                <h3>Som, microfone, camera ou botoes falhando</h3>
+                <p>Falhas em chamadas, camera escura, botao travando ou audio baixo pedem diagnostico para encontrar a causa certa.</p>
+              </div>
+            </article>
+            <article class="problem-card">
+              <span class="problem-icon">06</span>
+              <div>
+                <h3>Aparelho sem protecao</h3>
+                <p>Peliculas, capas e acessorios ajudam a evitar prejuizo em quedas e no uso diario. Consulte as opcoes disponiveis.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="solution-strip">
+            <div>
+              <h3>Solucao rapida: mande o modelo e uma foto pelo WhatsApp.</h3>
+              <p>A Saino Tec orienta se o caso e tela, bateria, conector, acessorio ou diagnostico presencial.</p>
+            </div>
+            <a class="button button-primary" href="https://wa.me/5547992608010?text=Ola%2C%20meu%20celular%20esta%20com%20problema%20e%20quero%20uma%20avaliacao." target="_blank" rel="noopener">Enviar problema</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="services">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="kicker">Servicos mais procurados</p>
+              <h2>Escolha o que voce precisa e peca um orcamento.</h2>
+            </div>
+            <p>Encontre a solucao certa para tela, bateria, carga, acessorios e outros problemas do dia a dia.</p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <span class="service-icon">01</span>
+              <h3>Troca de tela e vidro</h3>
+              <p>Substituicao de telas danificadas, toque falhando, manchas, riscos e quebras no display.</p>
+              <a class="service-link" href="https://wa.me/5547992608010?text=Ola%2C%20quero%20orcamento%20para%20troca%20de%20tela." target="_blank" rel="noopener">Consultar valor</a>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">02</span>
+              <h3>Bateria e carga</h3>
+              <p>Solucao para aparelho descarregando rapido, nao ligando, aquecendo ou com conector ruim.</p>
+              <a class="service-link" href="https://wa.me/5547992608010?text=Ola%2C%20meu%20celular%20esta%20com%20problema%20de%20bateria%20ou%20carga." target="_blank" rel="noopener">Pedir avaliacao</a>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">03</span>
+              <h3>Diagnostico tecnico</h3>
+              <p>Avaliacao cuidadosa para identificar falhas de software, som, camera, botoes e placa.</p>
+              <a class="service-link" href="https://wa.me/5547992608010?text=Ola%2C%20quero%20fazer%20um%20diagnostico%20no%20meu%20celular." target="_blank" rel="noopener">Agendar analise</a>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">04</span>
+              <h3>Peliculas e capas</h3>
+              <p>Venda e aplicacao de peliculas, alem de capas para protecao diaria em diferentes modelos.</p>
+              <a class="service-link" href="https://wa.me/5547992608010?text=Ola%2C%20quero%20saber%20sobre%20capas%20e%20peliculas." target="_blank" rel="noopener">Ver opcoes</a>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">05</span>
+              <h3>Carregadores e acessorios</h3>
+              <p>Venda de carregadores, cabos, fones e itens praticos para manter seu celular sempre pronto.</p>
+              <a class="service-link" href="https://wa.me/5547992608010?text=Ola%2C%20quero%20saber%20sobre%20acessorios." target="_blank" rel="noopener">Chamar a loja</a>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">06</span>
+              <h3>Atendimento local</h3>
+              <p>Loja no Centro de Rio do Sul para voce resolver tudo perto, sem enrolacao.</p>
+              <a class="service-link" href="#contato">Ver endereco</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="atendimento" class="highlight">
+        <div class="container highlight-grid">
+          <div>
+            <p class="kicker">Por que escolher</p>
+            <h2>Atendimento de loja pequena, com resposta direta e foco em resolver.</h2>
+            <p>A Saino Tec combina tecnologia, confianca e uma referencia leve a tradicao chinesa: disciplina, precisao e cuidado nos detalhes.</p>
+          </div>
+
+          <div class="commercial-banner">
+            <h3>Quer saber se compensa consertar?</h3>
+            <p>Envie uma mensagem com o modelo do aparelho e uma foto. A loja orienta o proximo passo.</p>
+            <ul class="commercial-list">
+              <li>Resposta facil pelo WhatsApp</li>
+              <li>Endereco central em Rio do Sul</li>
+              <li>Assistencia e acessorios em um so lugar</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="info" id="contato">
+        <div class="container info-grid">
+          <div class="info-panel">
+            <p class="kicker">Contato</p>
+            <h2>Fale com a Saino Tec.</h2>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-icon">W</span>
+                <span><b>WhatsApp</b>47 9 9260-8010</span>
+              </li>
+              <li>
+                <span class="contact-icon">P</span>
+                <span><b>Endereco</b>Rua Aristiliano Ramos, 42 - Sala 04, Centro, Rio do Sul - SC</span>
+              </li>
+              <li>
+                <span class="contact-icon">H</span>
+                <span><b>Horario</b>Consulte disponibilidade pelo WhatsApp antes de ir.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="owner-note">
+            <p>"Tecnologia se resolve com paciencia, peca certa e mao firme. Aqui o foco e atender bem para voce voltar a usar seu celular sem dor de cabeca."</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" aria-labelledby="cta-title">
+        <div class="container cta-box">
+          <div>
+            <p class="eyebrow">Atendimento rapido</p>
+            <h2 id="cta-title">Seu celular precisa de reparo hoje?</h2>
+            <p>Chame no WhatsApp, conte o problema e receba orientacao para o proximo passo.</p>
+          </div>
+          <a class="button button-primary" href="https://wa.me/5547992608010?text=Ola%2C%20quero%20fazer%20um%20orcamento%20na%20Saino%20Tec." target="_blank" rel="noopener">Pedir orcamento</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-row">
+        <span>Saino Tec - Assistencia Tecnica e Acessorios</span>
+        <span>Rio do Sul - SC</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
